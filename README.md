@@ -1,61 +1,79 @@
 # Python Nexus 🐍
 
-Python Nexus is a comprehensive utility suite designed to demonstrate core Python programming concepts through three essential tools: a Banking System, a Contact Directory, and a Mathematical Engine.
+A high-performance utility suite implementing core computational and data-management logic in Python, presented through a premium Retro-OS interface.
 
-While the project includes a premium Retro-OS frontend, the **primary core of this project is the Python backend logic**, implemented using standard libraries to ensure maximum compatibility and efficiency.
-
-## 🚀 Core Python Modules
-
-The heartbeat of the project resides in three independent Python scripts. Each is designed to be run directly from the CLI.
-
-### 1. ATM Banking System (`atmbank.py`)
-A secure ledger implementation for financial transactions.
-- **Key Logic**: Global state management for balance, input validation for deposits/withdrawals, and a menu-driven interface.
-- **Functions**:
-  - `check_balance()`: Retrieves current account state.
-  - `deposit(amount)`: Validates and adds funds to the ledger.
-  - `withdraw(amount)`: Implements overdraft protection and fund deduction.
-
-### 2. Contact Directory (`contactbook.py`)
-A dictionary-backed directory for managing personal contacts.
-- **Key Logic**: Utilizes Python dictionaries for $O(1)$ search complexity, implementing full CRUD (Create, Read, Update, Delete) operations.
-- **Functions**:
-  - `add_contact()`: Validates phone numbers (10-digit constraint) and adds entries.
-  - `search_contact()`: Performs key-based lookups in the directory.
-  - `update_contact()`: Modifies existing entries with validation.
-  - `delete_contact()`: Removes entries from the data structure.
-  - `view_contacts()`: Iterates through the dictionary to display all records.
-
-### 3. Precision Calculator (`calculator.py`)
-An arithmetic computation engine.
-- **Key Logic**: Implements a state-based calculation loop with a zero-division guard to prevent system crashes.
-- **Core Capabilities**: Addition, Subtraction, Multiplication, and Division.
+**Author:** [Puneeth](https://github.com/SMNpuneeth)
+**Repository:** [https://github.com/SMNpuneeth/-PYTHON-PY-Functions.git](https://github.com/SMNpuneeth/-PYTHON-PY-Functions.git)
 
 ---
 
-## 🖥️ Frontend Presentation Layer
+## 🧠 Core Python Architecture (70%)
 
-To surface the Python logic in a modern way, the project includes a **Retro-OS Frontend** (`frontend/index.html`).
+The primary objective of this project is the implementation of robust, efficient, and scalable Python logic. The system is divided into three specialized modules, each focusing on different aspects of the Python standard library.
 
-- **Purpose**: This file serves as the **output display**. It mirrors the exact logic, function names, and menu options of the Python scripts using JavaScript.
-- **Design**: Minimalist "Total Black & Neon Orange" aesthetic with CRT scanlines, 8-bit typography, and animated technical outlines.
-- **Role**: The HTML is a presentation shell; the logic it executes is a direct mirror of the `.py` source files.
+### 1. Banking Core (`atmbank.py`)
+This module implements a secure financial ledger. It focuses on **state management** and **input validation** to ensure data integrity.
+- **Technical Implementation**: Uses global state variables to track account balances across multiple function calls.
+- **Key Logic**: 
+    - **Validation**: Implements strict checks to prevent negative deposits or overdrafts.
+    - **Flow Control**: A `while True` loop manages the session, mirroring a real-world ATM machine's operational state.
+    - **Complexity**: $O(1)$ time complexity for all transaction operations.
 
-## 🛠️ Execution Guide
+### 2. Data Book (`contactbook.py`)
+A sophisticated contact management system that demonstrates the power of **Python Dictionaries** for high-speed data retrieval.
+- **Technical Implementation**: Uses a dictionary `{name: phone}` to store records, ensuring that search and deletion operations are nearly instantaneous.
+- **Key Logic**:
+    - **CRUD Operations**: Full implementation of Create, Read, Update, and Delete functionality.
+    - **String Constraints**: Implements phone number validation using length checks and digit verification.
+    - **Data Integrity**: Prevents duplicate entries by checking key existence before adding new contacts.
+- **Complexity**: $O(1)$ average case for search, addition, and deletion.
 
-### Running the Backend (Primary)
-To run the core logic, use the Python interpreter:
+### 3. Math Engine (`calculator.py`)
+A precise arithmetic computation tool focusing on **error handling** and **mathematical guards**.
+- **Technical Implementation**: Implements a state-based calculation loop.
+- **Key Logic**:
+    - **Zero-Division Guard**: Includes a critical check to prevent `ZeroDivisionError`, ensuring the system remains stable during invalid operations.
+    - **Floating Point Precision**: Handles float conversions for accurate decimal calculations.
+
+---
+
+## 🛠️ Installation & Usage (20%)
+
+To run this project locally, follow these steps to clone the repository and execute the modules.
+
+### 1. Clone the Project
+Use the following command to download the source code from GitHub:
+```bash
+git clone https://github.com/SMNpuneeth/-PYTHON-PY-Functions.git
+cd -PYTHON-PY-Functions
+```
+
+### 2. Run the Python Modules
+You can run any of the core utilities directly using the Python interpreter:
+
+**For the Bank System:**
 ```bash
 python atmbank.py
+```
+
+**For the Contact Book:**
+```bash
 python contactbook.py
+```
+
+**For the Calculator:**
+```bash
 python calculator.py
 ```
 
-### Viewing the Frontend (Output)
-Open the following file in any modern web browser:
-`frontend/index.html`
+---
 
-## ⚙️ Technical Stack
-- **Language**: Python 3.x (Backend)
-- **UI**: HTML5, CSS3 (Tailwind), JavaScript (Frontend Mirror)
-- **Fonts**: Press Start 2P, JetBrains Mono
+## 🖥️ Interface & Output (10%)
+
+To provide a visual representation of the backend logic, the project includes a **Retro-OS Frontend**.
+
+- **The Interface**: A minimalistic, mono-color (Total Black & Neon Orange) web page located at `frontend/index.html`.
+- **Design Philosophy**: Built with a "Retro-Gaming" aesthetic, featuring CRT scanlines, 8-bit typography (`Press Start 2P`), and animated neon outlines.
+- **Logic Mirroring**: The frontend is not a separate app; it is a **visual mirror**. Every button and input in the HTML corresponds exactly to a function and input in the Python scripts.
+
+**How to view:** simply open `frontend/index.html` in any modern web browser.
