@@ -1,0 +1,4 @@
+# Mark the frontend as documentation so it doesn't count toward language statistics
+frontend/*.html linguist-documentation
+frontend/*.css linguist-documentation
+frontend/*.js linguist-documentation
